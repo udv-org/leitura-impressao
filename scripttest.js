@@ -17,6 +17,25 @@ function loadFile(){
 }
 loadFile();
 
+function loadFileParse(){
+  var inputParse = document.getElementById("myFileParse");
+  var outputParse = document.getElementById("outputParse");
+    
+  input.addEventListener("changeParse", function () {
+    if (this.files && this.files[0]) {
+      var myFileParse = this.files[0];
+      var readerParse = new FileReader();
+      
+      readerParse.addEventListener('loadParse', function (e) {
+        outputParse.textContent = e.target.result;
+      });
+      
+      readerParse.readAsBinaryString(myFileParse);
+    }   
+  });
+}
+loadFileParse();
+
 function tableCreate(){
   var body = document.getElementById("myFile"),
   tbl  = document.createElement('table');
