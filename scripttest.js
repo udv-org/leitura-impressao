@@ -18,16 +18,16 @@ function loadFile(){
 loadFile();
 
 function loadFileParse(){
-  var inputParse = document.getElementById("myFileParse");
-  var outputParse = document.getElementById("outputParse");
+  var input = document.getElementById("myFileParse");
+  var output = document.getElementById("outputParse");
     
-  input.addEventListener("changeParse", function () {
+  input.addEventListener("change", function () {
     if (this.files && this.files[0]) {
       var myFileParse = this.files[0];
       var readerParse = new FileReader();
       
       readerParse.addEventListener('loadParse', function (e) {
-        outputParse.textContent = e.target.result;
+        output.textContent = e.target.result;
       });
       
       readerParse.readAsBinaryString(myFileParse);
