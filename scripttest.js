@@ -26,7 +26,7 @@ function loadFileParse(){
       var myFileParse = this.files[0];
       var readerParse = new FileReader();
       
-      readerParse.addEventListener('loadParse', function (e) {
+      readerParse.addEventListener('load', function (e) {
         output.textContent = e.target.result;
       });
       
@@ -66,7 +66,5 @@ function tableCreate(){
 
     }   
   });
-
-  
 }
 tableCreate();
