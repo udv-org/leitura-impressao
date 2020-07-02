@@ -20,7 +20,7 @@ loadFile();
 function loadFileParse(){
   var input = document.getElementById("myFileParse");
   var output = document.getElementById("outputParse");
-    
+
   input.addEventListener("change", function () {
     if (this.files && this.files[0]) {
       var myFileParse = this.files[0];
