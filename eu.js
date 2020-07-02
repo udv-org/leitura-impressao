@@ -18,8 +18,14 @@ function loadFile(){
 
 
 function imprimir(){
-    
-    window.alert("OLA")
+    //Para imprimir na página
+    var divToPrint = document.getElementById('myFile');
+    newWin = window.open("output.textContent");
+    newWin.document.write(divToPrint.outerHTML);
+    newWin.print();
+    newWin.close();
+ 
+    window.alert("OLA");
 }
 
 loadFile();
