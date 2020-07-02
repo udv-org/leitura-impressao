@@ -1,5 +1,7 @@
+var input = document.getElementById("myFile");
+
 function loadFile(){
-    var input = document.getElementById("myFile");
+
     var output = document.getElementById("output");
       
     input.addEventListener("change", function () {
@@ -19,11 +21,8 @@ function loadFile(){
 
 function imprimir(){
     //Para imprimir na página
-    var divToPrint = document.getElementById('myFile');
-    newWin = window.open("output.textContent");
-    newWin.document.write(divToPrint.outerHTML);
-    newWin.print();
-    newWin.close();
+    var w = window.open('eu.js'); //Required full file path.
+    w.print();
  
     window.alert("OLA");
 }
