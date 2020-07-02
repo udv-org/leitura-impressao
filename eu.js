@@ -15,4 +15,11 @@ function loadFile(){
       }   
     });
   }
-  loadFile();
+
+
+function imprimir(){
+    
+    window.alert("OLA")
+}
+
+loadFile();
