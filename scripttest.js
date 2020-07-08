@@ -1,6 +1,6 @@
 function loadFile(){
-  var input = document.querySelector('input');
-  var output = document.querySelector('output');
+  var input = document.getElementById("myFile");
+  var output = document.getElementById("output");
     
   input.addEventListener("change", function () {
     if (this.files && this.files[0]) {
@@ -18,8 +18,8 @@ function loadFile(){
 loadFile();
 
 function loadFileParse(){
-  var input = document.querySelector('input');
-  var output = document.querySelector('output');
+  var input = document.getElementById("myFileParse");
+  var output = document.getElementById("outputParse");
 
   input.addEventListener("change", function () {
     if (this.files && this.files[0]) {
@@ -36,35 +36,35 @@ function loadFileParse(){
 }
 loadFileParse();
 
-function tableCreate(){
-  var body = document.getElementById("myFile"),
-  tbl  = document.createElement('table');
-  tbl.style.width  = '100px';
-  tbl.style.border = '1px solid black';
+// function tableCreate(){
+//   var body = document.getElementById("myFile"),
+//   tbl  = document.createElement('table');
+//   tbl.style.width  = '100px';
+//   tbl.style.border = '1px solid black';
 
-  input.addEventListener("change", function () {
-    if (this.files && this.files[0]) {
-      var myFile = this.files[0];
-      var reader = new FileReader();
+//   input.addEventListener("change", function () {
+//     if (this.files && this.files[0]) {
+//       var myFile = this.files[0];
+//       var reader = new FileReader();
       
-      for(var i = 0; i < 3; i++){
-        var tr = tbl.insertRow();
-        for(var j = 0; j < 2; j++){
-            if(i == 2 && j == 1){
-                break;
-            } else {
-                var td = tr.insertCell();
-                td.appendChild(document.createTextNode('Cell'));
-                td.style.border = '1px solid black';
-                if(i == 1 && j == 1){
-                    td.setAttribute('rowSpan', '1');
-                }
-            }
-        }
-    }
-    body.appendChild(tbl);
+//       for(var i = 0; i < 3; i++){
+//         var tr = tbl.insertRow();
+//         for(var j = 0; j < 2; j++){
+//             if(i == 2 && j == 1){
+//                 break;
+//             } else {
+//                 var td = tr.insertCell();
+//                 td.appendChild(document.createTextNode('Cell'));
+//                 td.style.border = '1px solid black';
+//                 if(i == 1 && j == 1){
+//                     td.setAttribute('rowSpan', '1');
+//                 }
+//             }
+//         }
+//     }
+//     body.appendChild(tbl);
 
-    }   
-  });
-}
-tableCreate();
+//     }   
+//   });
+// }
+// tableCreate();
