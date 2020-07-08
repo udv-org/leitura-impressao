@@ -1,6 +1,6 @@
 function loadFile(){
-  var input = document.getElementById("myFile");
-  var output = document.getElementById("output");
+  var input = document.querySelector('input');
+  var output = document.querySelector('output');
     
   input.addEventListener("change", function () {
     if (this.files && this.files[0]) {
@@ -18,8 +18,8 @@ function loadFile(){
 loadFile();
 
 function loadFileParse(){
-  var input = document.getElementById("myFileParse");
-  var output = document.getElementById("outputParse");
+  var input = document.querySelector('input');
+  var output = document.querySelector('output');
 
   input.addEventListener("change", function () {
     if (this.files && this.files[0]) {
